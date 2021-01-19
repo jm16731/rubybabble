@@ -18,7 +18,9 @@ module RubyBabble
     end
 
     def draw_tile
-      @bag.shuffle.pop
+      #@bag.delete_at(rand(@bag.length))
+      #@bag.delete(@bag.sample)
+      @bag.shuffle!.pop
     end
 
     def empty?
