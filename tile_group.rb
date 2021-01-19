@@ -15,6 +15,9 @@ module RubyBabble
     end
 
     def hand
+      word = ""
+      @tiles.each {|tile| word += tile.to_s}
+      word
     end
   end
 end
