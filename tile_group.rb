@@ -12,8 +12,8 @@ module RubyBabble
     end
 
     def remove(tile)
-      @tiles.delete(tile)
-      #tiles.delete(tile.to_sym)
+      #tile.to_sym
+      @tiles.delete_at(@tiles.index(tile))
     end
 
     def hand
