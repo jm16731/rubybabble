@@ -8,10 +8,12 @@ module RubyBabble
 
     def append(tile)
       @tiles.append(tile)
+      #@tiles.append(tiles.to_sym)
     end
 
     def remove(tile)
       @tiles.delete(tile)
+      #tiles.delete(tile.to_sym)
     end
 
     def hand
