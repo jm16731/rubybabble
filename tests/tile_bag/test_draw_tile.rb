@@ -9,10 +9,7 @@ class TestPointsFor < MiniTest::Test
 
   def test_has_proper_number_of_tiles
     num_of_tiles = 0
-    unless @tile_bag.empty?
-      @tile_bag.draw_tile
-      num_of_tiles += 1
-    end
+    @tile_bag.each {|tile| num_of_tiles += 1}
     assert_equal 98, num_of_tiles
   end
 
@@ -23,10 +20,12 @@ class TestPointsFor < MiniTest::Test
     current_distribution = {E: 0, A: 0, I: 0, O: 0, N: 0, R: 0, T: 0,
       L: 0, S: 0, U: 0, D: 0, G: 0, B: 0, C: 0, M: 0, P: 0,
       F: 0, H: 0, V: 0, W: 0, Y: 0, K: 0, J: 0, X: 0, Q: 0, Z: 0}
-    unless @tile_bag.empty?
-      tile = @tile_bag.draw_tile
-      current_distribution[tile] += 1
-    end
+
+    @tile_bag.each {|tile| current_distribution[tile] += 1}
+    #unless @tile_bag.empty?
+    #  tile = @tile_bag.draw_tile
+    #  current_distribution[tile] += 1
+    #end
     assert_equal true_distribution, current_distribution
   end
 end
