@@ -2,7 +2,7 @@ require_relative "../../tile_bag.rb"
 require "minitest/autorun"
 include RubyBabble
 
-class TestPointsFor < MiniTest::Test
+class TestDrawTile < MiniTest::Test
   def setup
     @tile_bag = TileBag.new
   end
@@ -22,10 +22,6 @@ class TestPointsFor < MiniTest::Test
       F: 0, H: 0, V: 0, W: 0, Y: 0, K: 0, J: 0, X: 0, Q: 0, Z: 0}
 
     @tile_bag.each {|tile| current_distribution[tile] += 1}
-    #unless @tile_bag.empty?
-    #  tile = @tile_bag.draw_tile
-    #  current_distribution[tile] += 1
-    #end
     assert_equal true_distribution, current_distribution
   end
 end
