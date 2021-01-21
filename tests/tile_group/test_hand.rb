@@ -6,4 +6,16 @@ class TestHand < MiniTest::Test
   def setup
     @tile_group = TileGroup.new
   end
+
+  def test_convert_empty_group_to_string
+  end
+
+  def test_convert_single_tile_group_to_string
+  end
+
+  def test_convert_multi_tile_group_to_string
+  end
+
+  def test_convert_multi_tile_group_with_duplicates_to_string
+  end
 end
