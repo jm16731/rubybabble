@@ -1,4 +1,4 @@
-require "tile_bag.rb"
+#require "tile_bag.rb"
 
 module RubyBabble
   class Word < TileGroup

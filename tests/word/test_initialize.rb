@@ -8,5 +8,6 @@ class TestInitalize < Minitest::Test
   end
 
   def test_create_empty_word
+    assert_equal [], @word.tiles
   end
 end
