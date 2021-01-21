@@ -7,12 +7,16 @@ module RubyBabble
     end
 
     def append(tile)
+      if tile.is_a? String
+        tile = tile.upcase.to_sym
+      end
       @tiles.append(tile)
-      #@tiles.append(tiles.to_sym)
     end
 
     def remove(tile)
-      #tile.to_sym
+      if tile.is_a? String
+        tile = tile.upcase.to_sym
+      end
       @tiles.delete_at(@tiles.index(tile))
     end
 
