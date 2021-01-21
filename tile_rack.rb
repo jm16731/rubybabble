@@ -13,10 +13,10 @@ module RubyBabble
     end
 
     def remove_word(text)
-      Word word = Word.new
+      word = Word.new
 
       subarray = []
-      text.each {|char| subarray.append(char); remove(char)}
+      text.each_char {|char| subarray.append(char); remove(char)}
       subarray.each {|char| word.append(char)}
       word
     end
