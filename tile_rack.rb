@@ -9,7 +9,7 @@ module RubyBabble
     end
 
     def has_tiles_for?(text)
-      word.chars.sort == text.chars.sort
+      hand.chars.sort == text.upcase.chars.sort
     end
 
     def remove_word(text)
