@@ -19,7 +19,7 @@ module RubyBabble
         puts "Please guess a word using the above letters"
         @guess = gets
         if @guess == ":quit"
-          puts "Thanks for playing, " + get_score
+          puts "Thanks for playing, #{get_score}"
           next
         else if not Spellchecker::check(@guess)[0][:correct]
           puts "Not a valid word"
@@ -28,7 +28,7 @@ module RubyBabble
         else
           @word = @tile_rack.remove_word(@gues)
           @score += @word.score
-          puts "You made " + @word + " for " + @word.score + " points"
+          puts "You made #{@word} for #{@word.score} points"
         end
         puts get_score
       end
