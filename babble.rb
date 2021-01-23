@@ -23,10 +23,8 @@ module RubyBabble
           next
         else if not Spellchecker::check(@guess)[0][:correct]
           puts "Not a valid word"
-          next
         else if not @tile_rack.has_tiles_for?(@guess)
           puts "Not enough tiles"
-          next
         else
           @word = @tile_rack.remove_word(@gues)
           @score += @word.score
