@@ -1,5 +1,3 @@
-#require "tile_bag.rb"
-
 module RubyBabble
   class Word < TileGroup
     def initialize

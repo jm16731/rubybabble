@@ -5,13 +5,6 @@ include RubyBabble
 class TestHasTilesFor < Minitest::Test
   def setup
     @tile_rack = TileRack.new
-    #@tile_rack.append(:A)
-    #@tile_rack.append(:X)
-    #@tile_rack.append(:E)
-    #@tile_rack.append(:H)
-    #@tile_rack.append(:E)
-    #@tile_rack.append(:A)
-    #@tile_rack.append(:D)
   end
 
   def test_rack_has_needed_letters_when_letters_are_in_order_no_duplicates

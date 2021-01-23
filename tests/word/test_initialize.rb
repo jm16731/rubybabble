@@ -2,7 +2,7 @@ require_relative "../../word.rb"
 require "minitest/autorun"
 include RubyBabble
 
-class TestInitalize < Minitest::Test
+class TestInitialize < Minitest::Test
   def setup
     @word = Word.new
   end
