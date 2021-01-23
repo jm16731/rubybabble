@@ -38,7 +38,7 @@ module RubyBabble
 
     def populate_tile_rack
       until @tile_rack.number_of_tiles_needed == 0 do
-        @tile_rack.append.@tile_bag.draw_tile
+        @tile_rack.append.(@tile_bag.draw_tile)
       end
     end
 
@@ -48,5 +48,4 @@ module RubyBabble
 
   end
 end
-
 Babble.new.run
