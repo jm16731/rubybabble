@@ -30,7 +30,7 @@ module RubyBabble
           @score += @word.score
           puts "You made " + @word + " for " + @word.score + " points"
         end
-        get_score
+        puts get_score
       end
     end
 
@@ -48,4 +48,5 @@ module RubyBabble
 
   end
 end
+
 Babble.new.run
