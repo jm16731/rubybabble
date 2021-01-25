@@ -1,3 +1,6 @@
+require_relative "tile_group.rb"
+require_relative "tile_bag.rb"
+
 module RubyBabble
   class Word < TileGroup
     def initialize

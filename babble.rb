@@ -1,9 +1,13 @@
 require "spellchecker"
 require "tempfile"
+require_relative "tile_bag.rb"
+require_relative "tile_rack.rb"
+require_relative "word.rb"
+require_relative "tile_group.rb"
 
 module RubyBabble
   class Babble
-    def intialize
+    def initialize
       @tile_bag = TileBag.new
       @tile_rack = TileRack.new
       @word = Word.new
@@ -21,9 +25,9 @@ module RubyBabble
         if @guess == ":quit"
           puts "Thanks for playing, #{get_score}"
           next
-        else if not Spellchecker::check(@guess)[0][:correct]
+        elsif not Spellchecker::check(@guess)[0][:correct]
           puts "Not a valid word"
-        else if not @tile_rack.has_tiles_for?(@guess)
+        elsif not @tile_rack.has_tiles_for?(@guess)
           puts "Not enough tiles"
         else
           @word = @tile_rack.remove_word(@gues)
@@ -38,15 +42,15 @@ module RubyBabble
 
     def populate_tile_rack
       until @tile_rack.number_of_tiles_needed == 0 do
-        @tile_rack.append.(@tile_bag.draw_tile)
+        @tile_rack.append(@tile_bag.draw_tile)
       end
     end
 
     def get_score
-      "total score: " + @score
+      "total score: #{@score}"
     end
 
   end
 end
 
-Babble.new.run
+RubyBabble::Babble.new.run
