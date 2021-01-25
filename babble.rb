@@ -21,7 +21,7 @@ module RubyBabble
         populate_tile_rack
         puts @tile_rack.hand
         puts "Please guess a word using the above letters"
-        @guess = gets
+        @guess = gets.chomp
         if @guess == ":quit"
           puts "Thanks for playing, #{get_score}"
           next

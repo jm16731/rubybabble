@@ -1,5 +1,6 @@
 require_relative "tile_group.rb"
 require_relative "word.rb"
+require "set"
 
 module RubyBabble
   class TileRack < TileGroup
@@ -13,6 +14,11 @@ module RubyBabble
 
     def has_tiles_for?(text)
       hand.chars.sort == text.upcase.chars.sort
+      #textArray = text.upcase.chars.sort
+      #hand.each_char {|char|
+      #  textArray.delete_at(textArray.index(char))
+      #}
+      #textArray.empty?
     end
 
     def remove_word(text)
